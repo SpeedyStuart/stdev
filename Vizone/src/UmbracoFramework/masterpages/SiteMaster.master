@@ -1,0 +1,37 @@
+<%@ Master Language="C#" MasterPageFile="~/umbraco/masterpages/default.master" AutoEventWireup="true" %>
+<asp:Content ContentPlaceHolderID="ContentPlaceHolderDefault" runat="server">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head id="head" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title><asp:placeholder runat="server"><umbraco:Item runat="server" field="pageName" /> - <umbraco:Item runat="server" field="siteName" recursive="true" /></asp:placeholder></title>
+    <link rel="stylesheet" type="text/css" href="/css/layout.css" /> 
+  </head>
+  <body>    
+    <div id="main">
+      <div class="header">
+        <a href="/"><img src="/i/logo.jpg" alt="Vizone International" width="290"/></a>
+        <div class="right">
+            <ul>
+                <li>Virtual</li>
+                <li>Vitools</li>
+                <li>Visit</li>
+            </ul>
+        </div>
+      </div>
+      <div class="left">
+        <umbraco:Macro Alias="Navigation" runat="server"></umbraco:Macro>
+      </div>
+
+      <div id="body">
+        <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+      </div>
+
+      <div id="footer">
+        <p>Copyright Vizone International 2011</p>
+                <p><a href="#">privacy</a></p>
+      </div>
+    </div>
+  </body>
+</html>  
+</asp:Content>

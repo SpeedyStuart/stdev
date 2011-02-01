@@ -1,0 +1,6 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="BodyPlaceholder" runat="server">
+ <umbraco:Macro HeadingText="[#heading]" PageTitle="[#pageName]" Alias="PageHeading" runat="server"></umbraco:Macro>
+PEOPLE PAGE BODY
+</asp:Content>

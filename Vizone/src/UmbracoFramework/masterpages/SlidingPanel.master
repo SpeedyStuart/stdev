@@ -1,0 +1,6 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="BodyPlaceholder" runat="server">
+    <umbraco:Item field="heading" runat="server"></umbraco:Item>
+SLIDING PANEL PAGE BODY
+</asp:Content>

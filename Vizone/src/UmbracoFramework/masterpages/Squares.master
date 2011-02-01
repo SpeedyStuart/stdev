@@ -1,0 +1,7 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderID="BodyPlaceholder" runat="server">
+
+ <umbraco:Macro HeadingText="[#heading]" PageTitle="[#pageName]" Alias="PageHeading" runat="server"></umbraco:Macro>
+  SQUARES PAGE BODY
+</asp:Content>

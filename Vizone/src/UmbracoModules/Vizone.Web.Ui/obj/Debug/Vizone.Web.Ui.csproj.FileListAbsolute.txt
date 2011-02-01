@@ -1,0 +1,5 @@
+C:\PWork\Vizone\src\UmbracoModules\Vizone.Web.Ui\obj\Debug\ResolveAssemblyReference.cache
+C:\PWork\Vizone\src\UmbracoModules\Vizone.Web.Ui\obj\Debug\Vizone.Web.Ui.dll
+C:\PWork\Vizone\src\UmbracoModules\Vizone.Web.Ui\obj\Debug\Vizone.Web.Ui.pdb
+C:\PWork\Vizone\src\UmbracoModules\Vizone.Web.Ui\bin\Vizone.Web.Ui.dll
+C:\PWork\Vizone\src\UmbracoModules\Vizone.Web.Ui\bin\Vizone.Web.Ui.pdb
