@@ -27,7 +27,7 @@ namespace Vizone.Web.Ui.UserControls
                     int s = HeadingText.ToLower().IndexOf(PageTitle.ToLower());
                     int l = PageTitle.Length;
 
-                    return string.Format("{0}<span class=\"highlight\">{1}</span>{2}",
+                    return string.Format("{0}<span class=\"h1lime\">{1}</span>{2}",
                         HeadingText.Substring(0, s),
                         HeadingText.Substring(s, l),
                         HeadingText.Substring(s+l));

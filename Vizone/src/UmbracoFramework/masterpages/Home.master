@@ -1,5 +1,18 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
 
 <asp:Content ContentPlaceHolderID="BodyPlaceholder" runat="server">
-HOME PAGE BODY
+<div id="block-container">
+    <div id="hp-image">
+        <img src="assets/images/homepage/kevan-off.png" id="pic1" alt="Kevan" />
+    </div>
+    <umbraco:Macro Alias="HomepageContent" runat="server"></umbraco:Macro>
+
+    <div id="hptext8" class="hptext" style="display:none;">
+        <img src="assets/images/homepage/heading8.png" alt="" />
+        <p>Our people and our customers can use our online portal to access information about a specific project or all things change management.</p>
+        <p class="hpquote"><em>&ldquo;Vizone came in and gave us the confidence to do it ourselves...&rdquo;</em>   >></p>
+        <p class="hpquote1">CTO Vodafone UK</p>
+    </div>
+
+</div>
 </asp:Content>

@@ -2,36 +2,56 @@
 <asp:Content ContentPlaceHolderID="ContentPlaceHolderDefault" runat="server">
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]> 
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head id="head" runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <title><asp:placeholder runat="server"><umbraco:Item runat="server" field="pageName" /> - <umbraco:Item runat="server" field="siteName" recursive="true" /></asp:placeholder></title>
-    <link rel="stylesheet" type="text/css" href="/css/layout.css" /> 
-  </head>
+  <head>
+    <title><asp:placeholder runat="server"><umbraco:Item ID="Item1" runat="server" field="pageName" /> - <umbraco:Item ID="Item2" runat="server" field="siteName" recursive="true" /></asp:placeholder></title>
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="language" content="en" />
+
+    <meta name="robots" content="all,index,follow" />
+    <meta name="google-site-verification" content="" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <link href="assets/images/common/favicon.gif" type="image/gif" rel="icon" />
+
+    
+    <link type="text/css" media="screen" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" media="screen" rel="stylesheet" href="css/thickbox.css" />
+    <link  type="text/css" media="screen" rel="stylesheet" href="css/coda-slider.css"  />
+
+    <script src="js/jquery-1.2.6.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/thickbox.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="js/jquery.scrollTo-1.3.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.localscroll-1.2.5.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.serialScroll-1.2.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/coda-slider.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="js/imagechanger.js" type="text/javascript" charset="utf-8"></script>
+  </head> 
+
   <body>    
-    <div id="main">
-      <div class="header">
-        <a href="/"><img src="/i/logo.jpg" alt="Vizone International" width="290"/></a>
-        <div class="right">
-            <ul>
-                <li>Virtual</li>
-                <li>Vitools</li>
-                <li>Visit</li>
-            </ul>
-        </div>
-      </div>
-      <div class="left">
+    <div id="container">
+
+        <div id="header">
+            <a href="/"><img src="assets/images/common/vizone-logo.png" alt="" /></a>
+            <p class="header-links">
+                <a href="virtual.html" onmouseover="hidetext('hptext1');displaytext('hptext8');change1('pic1','image2');" onmouseout="hidetext('hptext8');displaytext('hptext1');change1('pic1','image_off');">Virtual</a>
+                <br class="hdn" />
+                <a href="vitools.html" >Vitools</a><br class="hdn" /><a href="visit.html" >Visit</a>
+            </p>
+        </div><!--header-->
+
         <umbraco:Macro Alias="Navigation" runat="server"></umbraco:Macro>
-      </div>
-
-      <div id="body">
         <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server"></asp:ContentPlaceHolder>
-      </div>
-
-      <div id="footer">
-        <p>Copyright Vizone International 2011</p>
-                <p><a href="#">privacy</a></p>
-      </div>
-    </div>
   </body>
 </html>  
 </asp:Content>
