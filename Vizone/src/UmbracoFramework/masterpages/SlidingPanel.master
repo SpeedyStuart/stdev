@@ -1,6 +1,21 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="BodyPlaceholder" runat="server">
-    <umbraco:Item field="heading" runat="server"></umbraco:Item>
-SLIDING PANEL PAGE BODY
+<asp:Content ContentPlaceHolderID="BodyPlaceholder" runat="server">
+    <div id="title-area">
+        <umbraco:Macro HeadingText="[#heading]" PageTitle="[#pageName]" Alias="PageHeading"
+            runat="server"></umbraco:Macro>
+        <p>
+            <umbraco:Item Field="sectionSummary" runat="server"></umbraco:Item>
+        </p>
+    </div>
+    <div id="vigorous-slider">
+        <div id="slider">
+            <umbraco:Macro runat="server" Alias="SlidingPanelPanels" />
+            <umbraco:Macro runat="server" Alias="SlidingPanelNavigation" />
+
+            <div class="vigorous-img">
+                <img src="assets/images/vigorous/vigorous-man.png" alt="Vigorous" />
+            </div>
+        </div>
+    </div>
 </asp:Content>
