@@ -1,0 +1,181 @@
+/************************************************
+         Global
+************************************************/
+
+body {	width:99%; font-family: Georgia, Times, Times New Roman, Serif; font-size: 11px; color: #999;}
+ul {list-style:none;}
+.hdn {display:none;}
+p {font-size:100%;}
+img, img a {border:0;}
+h1 {font-size:24px; color:#036; padding:0;margin:0; font-weight:normal;}
+h1 .h1lime {color:#b0d409; padding:0;margin:0; font-weight:normal;}
+h2 {font: 24px Georgia, verdana, arial, sans-serif; color:#036; font-weight:normal;}
+h3 {font-size:13px;}
+
+#container {width:980px; margin: 0 auto; padding:0;}
+#header {display:block; width:980px; height: 70px;}
+#header p {float:right; padding: 42px 60px 0 0;}
+#header p a {padding: 0 0 0 20px; text-decoration:none; color: #999;}
+#header p a:hover {text-decoration:underline; color: #b0d409;}
+
+#menu {float:left; position:relative; width: 188px; padding: 35px 0 0 54px; font-size:24px; z-index:250;}
+#menu a { display:block; text-decoration:none; color: #c3c3c3; padding:1px 0; margin:0;margin-right:60px;}
+#menu li {padding:0;}
+#menu li a.selected { color: #b0d409;}
+#menu li a:hover { color: #b0d409;}
+  
+#menu .smallmenu { display:block; width: 90px; padding: 245px 0 0 0px; font-size:10px;}
+#menu .smallmenu1 a { font-size:11px; padding: 1px 0 0 0px; text-decoration:none; color: #c3c3c3; }
+#menu .smallmenu1 a { font-size:11px; padding: 1px 0 0 0px; text-decoration:none; color: #c3c3c3; }
+#title-area {float:left; display:block; min-height: 80px; width: 675px; margin-top:50px;}
+
+
+#main-image {float:left; position:absolute; top:35px; left: 355px;}
+
+#header a.selected { color: #b0d409;}
+
+
+/************************************************
+         HOME
+************************************************/
+
+#hp-image {float:left; position:absolute; top:190px; left: -130px; z-index:-1;}
+
+.hptext {float:left; position:relative; top:30px; left:315px;}
+.hptext p {width:340px; margin: 2px 0 0 46px; font-size: 16px; line-height:20px;}
+.hptext p strong {color: #b0d409; font-weight:normal;}
+.hptext p.hpquote {font-size: 14px; line-height:18px;padding-top:38px;}
+.hptext p.hpquote1 {font-size: 14px; line-height:18px;padding-top:1px;}
+
+
+
+/************************************************
+         VIGOROUS
+************************************************/
+
+#block-container {position:relative; float:left; width:675px; height:406px; padding: 0;}
+.block {float:left; overflow:hidden; display:block; width:134px; height:134px; border-right:1px solid #fff; border-bottom: 1px solid #fff; background: #f5f5f6; padding:0; margin:0;}
+.block a {display:block;width:268px; height:134px; padding:0; margin:0; text-decoration:none;}
+.block a:hover {margin-left: -134px;}
+.copy {display:block; width:268px; height:134px; padding:0; margin:0;}
+.copy-left {float:left; display:block; width:114px; height:114px; background: #f5f5f6; padding:10px; margin:0; color: #999;}
+.copy-right {float:left; display:block; width:114px; height:114px; background: #b4d513; padding:10px; margin:0; color:#fff;}
+.copy-left strong, .copy-right strong {color:#036;}
+
+ #vigorous-slider{float:left;width: 736px;min-height: 425px;margin: 0 0;position: relative;background: url(images/vigorous/vigorous-bg.png) no-repeat;}   
+.vigorous-img img {float:right; position: absolute; top:0px; left:469px; z-index: 20;}
+.slider-container {position:relative; float:left; width:736px; min-height: 464px; background: url(images/vigorous/vigorous-bg.png) 0 0 no-repeat;}
+.clientlogo {margin: 30px 45px 0 0;}
+
+
+/************************************************
+         VIRTUOUS
+************************************************/
+
+#virtuous-image {float:left; position:absolute; top:35px; left: 425px;}
+  
+  
+/************************************************
+         VIntage
+************************************************/  
+  
+#vintage-image {float:left; position:absolute; top:55px; left: 419px;}
+  
+  
+/************************************************
+         VIGILANT
+************************************************/
+
+#vigilant-image {float:left; position:absolute; top:93px; left: 427px;}
+  
+/************************************************
+         VISIT
+************************************************/
+
+#visit-container {position:relative; left:-43px; top:-1px; float:left; width:730px; height:460px; background: url(images/visit/visit-bg.png) 0px 0 no-repeat;}
+p.visit-email {display:block;position:relative; width:730px; text-align:center; margin-top:195px;}
+p.visit-email a {font-size: 14px; color:#036; text-decoration:none;}
+p.visit-email a:hover {color: #b0d409;}
+
+
+/************************************************
+         VITAL
+************************************************/
+
+
+.imageblock {float:left; overflow:hidden; display:block; width:134px; height:134px; background: #f5f5f6; padding:0; margin: 0 0 10px 0;}
+.imagerollover {display:block; width:268px; height:134px; padding:0; margin:0;}
+.imageblock a {display:block; text-decoration:none;}
+.imageblock a:hover {margin-left: -134px;}
+.image-left {float:left; display:block; width:134px; height:134px; background: #fff; padding:0px; margin:0;}
+.image-right {float:left; display:block; width:134px; height:134px; background: #fff; padding:0px; margin:0;}
+
+.vitaltext {float:left; position:relative; top:0px; left:0px;}
+.vitaltext p {float:left; width:620px; margin: 2px 0 0 0px; font-size: 16px; line-height:20px;}
+   
+#vital-slider{float:left;width: 736px;min-height: 380px;margin: 0 0;position: relative;padding:0;}
+
+/************************************************
+         VICTORIOUS
+************************************************/
+
+
+.victoryblock {float:left; overflow:hidden; display:block; width:134px; height:134px; background: #f5f5f6; border-right: 1px solid #fff; border-bottom: 1px solid #fff; padding:0; margin:0;}
+.victoryrollover {display:block; width:268px; height:134px; padding:0; margin:0;}
+.victoryblock a {display:block; text-decoration:none;}
+.victoryblock a:hover {margin-left: -134px;}
+.victory-left {float:left; position:relative;display:block; width:134px; height:134px; background: #fff; padding:0px; margin:0;}
+ .victory-right {float:left; position:relative; display:block; width:114px; height:114px; background: #036; padding:10px; margin:0px;}
+
+span.description {display:inline; color:#fff;}
+span.lime {color:#b0d409;}
+   
+    
+
+/************************************************
+         VITOOLS
+************************************************/
+
+#vitools-container {position:relative; float:left; width:730px; height:405px; background: url(images/vitools/vitools-bg.png) 0px 0 no-repeat;}
+.col {display:block;position:relative; min-height:260px; margin-top:130px;float:left;width:195px; padding:15px;}
+.col h2 {font-size: 17px; font-weight:normal; font-style:normal; color:#999; min-height:55px;}
+.col p {padding-bottom: 5px;}
+.col a {color:#036; text-decoration:none;}
+.col a:hover {color:#b0d409;}
+
+.inputfield {display:block;float:left; width:195px; padding:0px;margin:0px;}
+.inputfield label {display:block;float:left; min-width:65px;padding:0px;margin:0px;}
+.inputfield input {display:block;float:left; width:110px;padding:0px;margin:0px;}
+input[type="submit"] {float:right; margin: 10px 10px 0 0;}
+
+
+#vitools-sub-container {position:relative; float:left; width:675px; height:406px; padding: 0;}
+ul.block {float:left; display:block; width:675px; height:405px; border-right:1px solid #fff; border-bottom: 1px solid #fff; background: #f5f5f6; padding:0; margin:0;}
+li.copy {float:left;display:block; width:134px; height:134px; padding:0; margin:0;border-right: 1px solid #fff; border-bottom: 1px solid #fff;}
+li.copy a {display:block; text-decoration:none; width:114px; height:114px; background: #f5f5f6; padding:10px; margin:0; color:#fff; font-size: 17px; font-weight:normal; color:#999;}
+li.copy a:hover {display:block; text-decoration:none; width:114px; height:114px; background: #464646; padding:10px; margin:0; color:#fff;}
+li.copy a span.arrow {color:#f5f5f6;}
+li.copy a:hover span.arrow {color:#b0d409;}
+
+#vitools-image {float:left; position:absolute; top:46px; left: 405px;}
+  
+  
+/************************************************
+         VIRTUAL
+************************************************/  
+  
+.maptext {float:left; position:absolute; top:270px; left:0px; z-index:40;}
+.maptext p {float:left; width:115px; padding: 0px; font-size: 12px; line-height:18px; color:#fff;}
+.maptext ul {float:left; width:115px; padding: 0 10px; margin:0; font-size: 12px; line-height:18px; color:#fff;}
+.maptext h2 {font-size: 12px; line-height:18px; margin:0; padding:10px 10px 0 10px; color:#555;}
+
+  /************************************************
+         Lightbox Content Formatting
+************************************************/
+
+
+#lightbox h2 {font-size:13px; color:#9c0; padding:35px 60px 0 80px;margin:0; font-weight:bold;}
+#lightbox h3 {font-size:13px; color:#666; padding:15px 60px 0px 80px;margin:0; font-weight:bold;}
+#lightbox p {font-size:13px; color:#666; padding:5px 60px 5px 80px;margin:0; font-weight:normal;}
+#lightbox ol, #lightbox ul {font-size:13px; color:#666; padding:5px 60px 5px 98px;margin:0; font-style:italic;}
+#lightbox ol li, #lightbox ul li {padding:0px 0px 10px 0px;}

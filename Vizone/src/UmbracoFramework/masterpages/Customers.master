@@ -5,8 +5,8 @@
         <umbraco:Macro HeadingText="[#heading]" PageTitle="[#pageName]" Alias="PageHeading"
             runat="server"></umbraco:Macro>
         <p>
-            <umbraco:Item ID="Item1" Field="sectionSummary" runat="server"></umbraco:Item>
+            <umbraco:Item Field="sectionSummary" runat="server"></umbraco:Item>
         </p>
     </div>
-    <umbraco:Macro runat="server" Alias="People" />
+    <umbraco:Macro runat="server" Alias="Customers" />
 </asp:Content>

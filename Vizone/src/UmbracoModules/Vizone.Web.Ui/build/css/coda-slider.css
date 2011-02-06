@@ -1,0 +1,284 @@
+
+/************************************************
+         Global
+************************************************/
+
+#slider {
+    float:left;
+    width: 736px;
+    margin: 0 0;
+    position: relative;
+    
+}
+
+#slider p {
+line-height:15px;
+}
+
+.scroll {
+    
+    width: 674px;
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+    clear: left;
+    padding:0;
+    margin:0;
+    
+}
+
+.hide {
+    display: none;
+}
+
+
+/************************************************
+         VIGOROUS
+************************************************/
+
+#vigorous-slider .scrollContainer div.panel {
+top:10px;
+    padding: 20px;
+    height: 310px;
+    width: 670px;
+}
+
+#vigorous-slider .scrollContainer div.panel p {
+    width: 580px;
+}
+
+#vigorous-slider ul.navigation {
+display:block;
+float:left;
+position:absolute;
+top:370px;
+left: 40px;
+width:525px;
+height:21px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0 10px;
+
+    z-index:100;
+    background: url(images/common/slider-bg.png) 0 0px repeat-x;
+}
+
+#vigorous-slider ul.navigation li {
+	position:relative;
+    display: block;
+    float:left;
+    height:21px;
+    margin: 0px;
+    padding:0px;
+    text-align: center;
+}
+
+#vigorous-slider ul.navigation li a {
+display: block;
+margin: 1px 0 0 0;
+    padding: 1px 0px;
+    height:21px;
+    width:85px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#vigorous-slider ul.navigation li a:hover {
+    color: #666;
+    height:21px;
+}
+
+#vigorous-slider ul.navigation li a.selected {
+color:#fff;
+    background: url(images/common/scroller.png) center top no-repeat;
+}
+
+#vigorous-slider ul.navigation a:focus {
+    outline: none;
+}
+
+#vigorous-slider .scrollButtons {
+display:block;
+    position: absolute;
+    top: 370px;
+    cursor: pointer;
+    z-index:50;
+}
+
+#vigorous-slider .scrollButtons.left {
+    left: 20px;
+}
+
+#vigorous-slider .scrollButtons.right {
+    right: 130px;
+}
+
+
+
+
+
+/************************************************
+         VITAL
+************************************************/
+
+#vital-slider .scrollContainer div.panel {
+padding:0;
+margin:20px 0 0 0;
+    height: 310px;
+    width: 675px;
+}
+
+#vital-slider .scrollContainer div.panel p {
+    width: 675px;
+}
+
+
+#vital-slider ul.navigation {
+display:block;
+float:left;
+position:absolute;
+top:340px;
+left: 21px;
+width:628px;
+height:21px;
+list-style: none;
+margin: 0;
+padding: 0 10px;
+z-index:100;
+background: url(images/common/slider-bg.png) 0 0px repeat-x;
+}
+
+#vital-slider ul.navigation li {
+	position:relative;
+    display: block;
+    float:left;
+    height:21px;
+    margin: 0px;
+    padding:0px;
+    text-align: center;
+}
+
+#vital-slider ul.navigation li a {
+display: block;
+margin: 1px 0 0 0;
+    padding: 1px 0px;
+    height:21px;
+    width:85px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#vital-slider ul.navigation li a:hover {
+    color: #666;
+    height:21px;
+}
+
+#vital-slider ul.navigation li a.selected {
+color:#fff;
+    background: url(images/common/scroller.png) center top no-repeat;
+}
+
+#vital-slider ul.navigation a:focus {
+    outline: none;
+}
+
+#vital-slider .scrollButtons {
+display:block;
+    position: absolute;
+    top: 340px;
+    cursor: pointer;
+    z-index:50;
+}
+
+#vital-slider .scrollButtons.left {
+    left: 0px;
+}
+
+#vital-slider .scrollButtons.right {
+    right: 46px;
+}
+
+
+
+/************************************************
+         VICTORIOUS
+************************************************/
+
+#victory-slider .scrollContainer div.panel {
+padding:0;
+margin:0px 0 0 0;
+    height: 450px;
+    width: 675px;
+}
+
+#victory-slider .scrollContainer div.panel p {
+    width: 675px;
+}
+
+
+#victory-slider ul.navigation {
+display:block;
+float:left;
+position:absolute;
+top:410px;
+left: 21px;
+width:612px;
+height:21px;
+list-style: none;
+margin: 0;
+padding: 0 10px;
+z-index:100;
+background: url(images/common/slider-bg.png) 0 0px repeat-x;
+}
+
+#victory-slider ul.navigation li {
+	position:relative;
+    display: block;
+    float:left;
+    height:21px;
+    margin: 0px;
+    padding:0px;
+    text-align: center;
+}
+
+#victory-slider ul.navigation li a {
+display: block;
+margin: 1px 0 0 0;
+    padding: 1px 0px;
+    height:21px;
+    width:85px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#victory-slider ul.navigation li a:hover {
+    color: #666;
+    height:21px;
+}
+
+#victory-slider ul.navigation li a.selected {
+color:#fff;
+    background: url(images/common/scroller.png) center top no-repeat;
+}
+
+#victory-slider ul.navigation a:focus {
+    outline: none;
+}
+
+#victory-slider .scrollButtons {
+display:block;
+    position: absolute;
+    top: 410px;
+    cursor: pointer;
+    z-index:50;
+}
+
+#victory-slider .scrollButtons.left {
+    left: 0px;
+}
+
+#victory-slider .scrollButtons.right {
+    right: 62px;
+}
+
