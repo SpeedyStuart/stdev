@@ -38,7 +38,7 @@
     <p class="hpquote1"><xsl:value-of select="$currentPage/quoteAttribution"/></p>
   </div>
   
-  <xsl:for-each select="$currentPage/ancestor-or-self::* [@level = $level]/* [string(umbracoNaviHide) != '1' and @isDoc]">
+  <xsl:for-each select="$currentPage/ancestor-or-self::* [@level = $level]/* [string(umbracoNaviHide) != '1' and @isDoc and string(topNavigation) != '1']">
     
     <div class="hptext" style="display:none;">
       <xsl:attribute name="id">hptext<xsl:value-of select="position()+1"/></xsl:attribute>
@@ -68,8 +68,39 @@
     </div>
     
   </xsl:for-each>
-  
-  
+
+  <xsl:for-each select="$currentPage/ancestor-or-self::* [@level = $level]/* [string(umbracoNaviHide) != '1' and @isDoc and string(topNavigation) = '1']">
+
+    <div class="hptext" style="display:none;">
+      <xsl:attribute name="id">hptext<xsl:value-of select="100+position()+1"/></xsl:attribute>
+      <xsl:if test="string(homepageHeadingImage) != ''">
+        <xsl:variable name="image" select="umbraco.library:GetMedia(homepageHeadingImage, false())"/>
+        <xsl:if test="string($image/umbracoFile) != ''">
+          <img src="{$image/umbracoFile}" alt="[image]">
+            <xsl:attribute name="alt">
+              <xsl:value-of select="heading"/>
+            </xsl:attribute>
+          </img>
+        </xsl:if>
+      </xsl:if>
+
+      <p>
+        <xsl:value-of select="homepageSummaryParagraph"/>
+      </p>
+      <xsl:if test="string(homepageQuote) != ''">
+        <p class="hpquote">
+          <em>
+            &ldquo;<xsl:value-of select="homepageQuote"/>&rdquo;
+          </em>
+        </p>
+        <p class="hpquote1">
+          <xsl:value-of select="homepageQuoteAttribution"/>
+        </p>
+      </xsl:if>
+    </div>
+
+  </xsl:for-each>
+
 
 </xsl:template>
 

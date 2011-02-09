@@ -18,14 +18,13 @@
 
     <xsl:template match="/">
         <ul id="menu">
-            <xsl:for-each select="$currentPage/ancestor-or-self::* [@level = $level]/* [string(umbracoNaviHide) != '1' and @isDoc]">
+            <xsl:for-each select="$currentPage/ancestor-or-self::* [@level = $level]/* [string(umbracoNaviHide) != '1' and @isDoc and string(topNavigation) != '1']">
                 <li>
-                  <a href="{umbraco.library:NiceUrl(@id)}">
-                    <xsl:attribute name="onmouseover">hidetext('hptext1');displaytext('hptext<xsl:value-of select="position()+1"/>');change1('pic1','image<xsl:value-of select="position()+1"/>');</xsl:attribute>
-                    <xsl:attribute name="onmouseout">hidetext('hptext<xsl:value-of select="position()+1"/>');displaytext('hptext1');change1('pic1','image_off');setTimeout('runImage()', 5000);</xsl:attribute>
+                  <a href="{umbraco.library:NiceUrl(@id)}" class="navLink">
                     <xsl:if test="$currentPage/@id=@id">
                       <xsl:attribute name="class">selected</xsl:attribute>
                     </xsl:if>
+                    <xsl:attribute name="rel"><xsl:value-of select="position()+1"/></xsl:attribute>
                     <xsl:value-of select="@nodeName"/>
                     </a>
                 </li>

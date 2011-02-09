@@ -5,6 +5,8 @@ $(function () {
     $('.personImage').click(function (event) { event.preventDefault(); });
     $('.personImage').mouseover(function () { textHelper.showText(this); });
     $('.personImage').mouseout(function () { textHelper.hideText(this); });
+    $('.navLink').mouseover(function () { navHelper.navOver(this); });
+    $('.navLink').mouseout(function () { navHelper.navOut(this); });
 });
 
 imageHelper = {
@@ -32,16 +34,31 @@ textHelper = {
     }
 }
 
+navHelper = {
+    navOver: function (anchor) {
+        var id = $(anchor).attr('rel');
+        hidetext('hptext1');
+        displaytext('hptext' + id);
+        change1('pic1', 'image2');
+    },
+    navOut: function (anchor) {
+        var id = $(anchor).attr('rel');
+        hidetext('hptext' + id);
+        displaytext('hptext1');
+        change1('pic1', 'image_off');
+        setTimeout('runImage()', 5000);
+    }
+}
 
 function hidetext(d) {
-    if ($(d).length > 0) {
-        $(d).hide();
+    if ($('#' + d).length > 0) {
+        $('#' + d).hide();
     }
 }
 
 function displaytext(d) {
-    if ($(d).length > 0) {
-        $(d).show();
+    if ($('#' + d).length > 0) {
+        $('#' + d).show();
     }
 }
 
@@ -75,8 +92,8 @@ if (document.images) {
 
 
 function change1(picName, imgName) {
-    if (document.images && $(picName).length > 0) {
-        imgOn = eval(imgName + ".src"); document.getElementById(picName).src = imgOn; 
+    if ($('#' + picName).length > 0 && eval(imgName)!=null) {
+        $('#' + picName).attr('src', eval(imgName + '.src'));
     }
 }
 

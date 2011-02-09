@@ -43,11 +43,7 @@
 
         <div id="header">
             <a href="/"><img src="assets/images/common/vizone-logo.png" alt="" /></a>
-            <p class="header-links">
-                <a href="virtual.html" onmouseover="hidetext('hptext1');displaytext('hptext8');change1('pic1','image2');" onmouseout="hidetext('hptext8');displaytext('hptext1');change1('pic1','image_off');">Virtual</a>
-                <br class="hdn" />
-                <a href="vitools.html" >Vitools</a><br class="hdn" /><a href="visit.html" >Visit</a>
-            </p>
+            <umbraco:Macro Alias="TopNavigation" runat="server" />
         </div><!--header-->
 
         <umbraco:Macro Alias="Navigation" runat="server"></umbraco:Macro>
