@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" Inherits="Vizone.Web.Ui.Code.Login" %>
+
+<asp:Content ContentPlaceHolderID="BodyPlaceholder" runat="server">
+
+    <% if (!IsLoggedIn)
+       { %>
+    <div id="title-area">
+        <umbraco:Macro ID="Macro1" HeadingText="[#heading]" PageTitle="[#pageName]" Alias="PageHeading" runat="server"></umbraco:Macro>
+        <p><umbraco:Item ID="Item1" field="sectionSummary" runat="server"></umbraco:Item></p>
+    </div>
+    <div id="vitools-container">
+
+        <div class="col">
+            <h2>Interested in working for <img src="assets/images/vitools/vizone-international.gif" alt="Vizone International" />?</h2>
+            <p><umbraco:Item field="box1" runat="server"></umbraco:Item></p>
+        </div>
+
+        <div class="col">
+            <h2>Already met the Team?</h2>
+            <p><umbraco:Item field="box2" runat="server"></umbraco:Item></p>
+            <form action="" method="post">
+                <input type="hidden" name="action" value="login" />
+                <div class="inputfield"><label id="username" class="" for="username">Username</label><input type="text" name="username" value="<%=Request["username"] %>" tabindex="1" class="username" /><%=EmailError%></div>
+                <div class="inputfield"><label id="password" class="" for="password">Password</label><input type="password" name="password" value="<%=Request["password"] %>" tabindex="2" class="password" /></div>
+                <input type="submit" value="Submit &raquo;" />
+            </form>
+        </div>
+
+        <div class="col">
+            <h2>Already in the Team or working with us?</h2>
+            <umbraco:Item field="box3" runat="server"></umbraco:Item>
+        </div>
+
+    </div>
+    <% } else { %>
+        <div id="title-area">
+            <h1><span class="h1lime">Vitools</span> &ndash; already met the team?</h1>
+            <p>Throughout the life cycle of a project, we are ever-watchful of dangers that threaten the pace and effectiveness of change.</p>
+        </div>
+
+        <div id="vitools-sub-container">
+
+        <div id="vitools-image">
+            <img src="assets/images/vitools/image-off.png" id="pic11" alt="" />
+        </div>
+
+        <ul class="block">
+
+        <li class="copy"><a href="assets/docs/blank.pdf" onmouseover="change1('pic11','image_team2')" onmouseout="change1('pic11','image_team_off')">Candidate Acceptance Note<span class="arrow"> >></span></a></li>
+        <li class="copy"><a href="assets/docs/blank.pdf" onmouseover="change1('pic11','image_team2')" onmouseout="change1('pic11','image_team_off')">Consultancy Services Agreement 1005<span class="arrow"> >></span></a></li>
+        <li class="copy"><a href="assets/docs/blank.pdf" onmouseover="change1('pic11','image_team2')" onmouseout="change1('pic11','image_team_off')">Data Transfer Agreement<span class="arrow"> >></span></a></li>
+        <li class="copy"></li>
+        <li class="copy"></li>
+        <li class="copy"><a href="assets/docs/blank.pdf" onmouseover="change1('pic11','image_team2')" onmouseout="change1('pic11','image_team_off')">Drug Screening Guidelines<span class="arrow"> >></span></a></li>
+        <li class="copy"><a href="assets/docs/blank.pdf" onmouseover="change1('pic11','image_team2')" onmouseout="change1('pic11','image_team_off')">Employee Screening Form<span class="arrow"> >></span></a></li>
+        <li class="copy"><a href="assets/docs/blank.pdf" onmouseover="change1('pic11','image_team2')" onmouseout="change1('pic11','image_team_off')">Vizone Mutual Secrecy Agreement<span class="arrow"> >></span></a></li>
+        <li class="copy"></li>
+        <li class="copy"></li>
+        <li class="copy"><a href="assets/docs/blank.pdf" onmouseover="change1('pic11','image_team2')" onmouseout="change1('pic11','image_team_off')">VI Timesheet Template<span class="arrow"> >></span></a></li>
+        <li class="copy"><a href="assets/docs/blank.pdf" onmouseover="change1('pic11','image_team2')" onmouseout="change1('pic11','image_team_off')">Vizone International Operating Handbook<span class="arrow"> >></span></a></li>
+        <li class="copy"></li>
+        <li class="copy"></li>
+        <li class="copy"></li>
+        </ul>
+    </div><!--block-container-->
+
+    <%} %>
+</asp:Content>

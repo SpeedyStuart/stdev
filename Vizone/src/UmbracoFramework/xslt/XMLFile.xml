@@ -1,26 +1,23 @@
-﻿<Squares id="1072" parentid="1053" level="2" writerid="0" creatorid="0" nodetype="1071" template="1046" sortorder="0" createdate="2011-02-05T12:01:12" updatedate="2011-02-05T16:31:48" nodename="Vintage" urlname="vintage" writername="Administrator" creatorname="Administrator" path="-1,1053,1072" isdoc="">
-  <SquareContent id="1075" parentid="1072" level="3" writerid="0" creatorid="0" nodetype="1074" template="0" sortorder="1" createdate="2011-02-05T15:50:34" updatedate="2011-02-05T15:51:13" nodename="Square 1" urlname="square-1" writername="Administrator" creatorname="Administrator" path="-1,1053,1072,1075" isdoc="">
-    <weDo>normal content in here etc.</weDo>
-    <weDont>abnormal content in here etc.</weDont>
-  </SquareContent>
-  <SquareContent id="1076" parentid="1072" level="3" writerid="0" creatorid="0" nodetype="1074" template="0" sortorder="2" createdate="2011-02-05T15:51:53" updatedate="2011-02-05T15:52:06" nodename="Square 2" urlname="square-2" writername="Administrator" creatorname="Administrator" path="-1,1053,1072,1076" isdoc="">
-    <weDo>normal content in here etc.</weDo>
-    <weDont>abnormal content in here etc.</weDont>
-  </SquareContent>
-  <SquareContent id="1077" parentid="1072" level="3" writerid="0" creatorid="0" nodetype="1074" template="0" sortorder="3" createdate="2011-02-05T16:12:07" updatedate="2011-02-05T16:12:33" nodename="Square 3" urlname="square-3" writername="Administrator" creatorname="Administrator" path="-1,1053,1072,1077" isdoc="">
-    <weDo>normal content in here etc.</weDo>
-    <weDont>abnormal content in here etc.</weDont>
-  </SquareContent>
-  <SquareContent id="1078" parentid="1072" level="3" writerid="0" creatorid="0" nodetype="1074" template="0" sortorder="4" createdate="2011-02-05T16:12:21" updatedate="2011-02-05T16:12:43" nodename="Square 4" urlname="square-4" writername="Administrator" creatorname="Administrator" path="-1,1053,1072,1078" isdoc="">
-    <weDo>normal content in here etc.</weDo>
-    <weDont>abnormal content in here etc.</weDont>
-  </SquareContent>
-  <faceUp>1080</faceUp>
-  <faceDown>1081</faceDown>
-  <heading>Vintage - we have been doing this a long time</heading>
-  <sectionSummary>Lorem ipsum dolor sit amet, consectetur adipiscing elt.</sectionSummary>
-  <homepageHeadingImage>1063</homepageHeadingImage>
-  <homepageSummaryParagraph>Vizone's reputation is founded on the experience of our people and the results we achieve together for our customers.</homepageSummaryParagraph>
+﻿<Virtual id="1160" parentID="1053" level="2" writerID="0" creatorID="0" nodeType="1158" template="1159" sortOrder="7" createDate="2011-02-09T21:45:12" updateDate="2011-02-10T20:04:25" nodeName="Virtual" urlName="virtual" writerName="Administrator" creatorName="Administrator" path="-1,1053,1160" isDoc="">
+  <topNavigation>1</topNavigation>
+  <americasList>
+    T-Mobile
+    Alcatel Lucent
+  </americasList>
+  <eMEAList>
+    Vodafone
+    BT
+    John Lewis
+  </eMEAList>
+  <asiaList>
+    Channel 9
+    Quantas
+  </asiaList>
+  <heading>Virtual</heading>
+  <sectionSummary>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum faucibus aliquam. Etiam nisl lacus.</sectionSummary>
+  <homepageHeadingImage>1069</homepageHeadingImage>
+  <homepageSummaryParagraph>Our people and customers can use our online portal to access information about a specific project or all things change management</homepageSummaryParagraph>
   <homepageQuote>Vizone came in and gave us the confidence to do it ourselves...</homepageQuote>
   <homepageQuoteAttribution>CTO Vodafone UK</homepageQuoteAttribution>
-</Squares>
+</Virtual>
+

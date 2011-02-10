@@ -1,0 +1,12 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderID="BodyPlaceholder" runat="server">
+    <div id="title-area">
+        <umbraco:Macro ID="Macro1" HeadingText="[#heading]" PageTitle="[#pageName]" Alias="PageHeading" runat="server"></umbraco:Macro>
+        <p><umbraco:Item ID="Item1" field="sectionSummary" runat="server"></umbraco:Item></p>
+    </div>
+    
+    <div id="visit-container">
+        <p class="visit-email"><a href="mailto:enquiries@vizoneinternational.com">enquiries@vizoneinternational.com</a></p>
+    </div>
+</asp:Content>

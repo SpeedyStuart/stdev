@@ -1,5 +1,21 @@
-﻿<%@ Master Language="C#" MasterPageFile="~/umbraco/masterpages/default.master" AutoEventWireup="true" %>
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
 
-<asp:Content ContentPlaceHolderID="ContentPlaceHolderDefault" runat="server">
- 
+<asp:Content ID="Content1" ContentPlaceHolderID="BodyPlaceholder" runat="server">
+    <div id="title-area">
+        <umbraco:Macro ID="Macro1" HeadingText="[#heading]" PageTitle="[#pageName]" Alias="PageHeading" runat="server"></umbraco:Macro>
+        <p><umbraco:Item ID="Item1" field="sectionSummary" runat="server"></umbraco:Item></p>
+    </div>
+    
+    <div id="block-container">
+        <img id="map" src="assets/images/virtual/map.png" usemap="#m_map" alt="" />
+        <map name="m_map">
+            <area shape="poly" coords="636,37,567,29,474,26,406,32,359,35,333,48,313,54,300,66,317,72,320,81,308,85,311,102,323,100,340,83,348,96,361,93,372,100,383,104,377,115,363,110,356,119,342,108,341,100,309,110,296,167,309,202,335,202,343,277,356,328,378,317,386,282,400,302,408,260,390,274,395,227,404,206,411,179,418,154,421,131,426,112,426,107,412,103,405,75,431,61,456,63,479,65,501,68,529,65,547,62,561,72,594,60,636,37" href="" onmouseover="change1('map','image_map3');displaytext('maptext3')" onmouseout="change1('map','image_map');hidetext('maptext3')" onclick="return false" alt="" />
+            <area shape="poly" coords="569,84,546,67,504,74,464,66,432,66,411,77,418,102,435,103,426,134,438,137,454,186,482,145,498,185,489,226,531,250,516,297,518,330,551,321,572,352,583,334,612,349,603,357,614,359,627,338,616,328,612,344,584,328,581,296,568,257,576,239,559,221,535,197,531,117,545,117,562,104,569,84" href="" onmouseover="change1('map','image_map4');displaytext('maptext4')" onmouseout="change1('map','image_map');hidetext('maptext4')" onclick="return false" alt="" />
+            <area shape="poly" coords="231,71,221,53,208,35,163,26,105,33,39,36,34,48,98,60,160,162,186,221,203,304,194,369,216,380,244,302,266,238,207,175,184,115,231,71" href="" onmouseover="change1('map','image_map2');displaytext('maptext2')" onmouseout="change1('map','image_map');hidetext('maptext2')" onclick="return false" alt="" />
+        </map>
+
+        <umbraco:Macro Alias="MapItems" runat="server" />
+
+    </div>
+    <!--block-container-->
 </asp:Content>

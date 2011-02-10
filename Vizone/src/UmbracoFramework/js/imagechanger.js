@@ -7,6 +7,8 @@ $(function () {
     $('.personImage').mouseout(function () { textHelper.hideText(this); });
     $('.navLink').mouseover(function () { navHelper.navOver(this); });
     $('.navLink').mouseout(function () { navHelper.navOut(this); });
+    $('#menu').mouseover(function () { change1('pic1', 'image2'); });
+    $('#menu').mouseout(function () { change1('pic1', 'image_off'); });
 });
 
 imageHelper = {
@@ -39,14 +41,11 @@ navHelper = {
         var id = $(anchor).attr('rel');
         hidetext('hptext1');
         displaytext('hptext' + id);
-        change1('pic1', 'image2');
     },
     navOut: function (anchor) {
         var id = $(anchor).attr('rel');
         hidetext('hptext' + id);
         displaytext('hptext1');
-        change1('pic1', 'image_off');
-        setTimeout('runImage()', 5000);
     }
 }
 
