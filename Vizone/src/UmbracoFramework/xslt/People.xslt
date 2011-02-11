@@ -38,19 +38,19 @@
   </xsl:template>
   
   <!-- Divide list into to panels - currently 2 people per panel (Change all 2s to 10s when more data-->
-  <xsl:template match="Person[(position()-1) mod 2 = 0]">
-    <xsl:variable name="position" select="1 +((position()-1) div 2)"/>
+  <xsl:template match="Person[(position()-1) mod 10 = 0]">
+    <xsl:variable name="position" select="1 +((position()-1) div 10)"/>
     <div class="panel">
       <xsl:attribute name="id">page<xsl:value-of select="$position"/>
       </xsl:attribute>
-      <xsl:apply-templates select="$currentPage/Person[position() &lt;= $position*2 and position() &gt; ($position*2)-2]" mode="person"/>
+      <xsl:apply-templates select="$currentPage/Person[position() &lt;= $position*10 and position() &gt; ($position*10)-10]" mode="person"/>
     </div>
   </xsl:template>
 
   <!-- Divide list into to panels - currently 2 people per panel (Change the mod 2 and div 2 to 10 when more data-->
   <!-- this oneis for the navigation but follows the exact same logic as above-->
-  <xsl:template match="Person[(position()-1) mod 2 = 0]" mode="navigation">
-    <xsl:variable name="position" select="1 +((position()-1) div 2)"/>
+  <xsl:template match="Person[(position()-1) mod 10 = 0]" mode="navigation">
+    <xsl:variable name="position" select="1 +((position()-1) div 10)"/>
     <li>
       <a>
         <xsl:attribute name="href">#page<xsl:value-of select="@id"/></xsl:attribute>

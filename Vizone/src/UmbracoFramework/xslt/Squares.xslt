@@ -53,12 +53,17 @@
         <xsl:attribute name="id"><xsl:value-of select="$currentPage/faceUp"/></xsl:attribute>
         <span class="copy">
           <span class="copy-left">
-            <strong>We</strong>&nbsp;
-            <xsl:value-of select="weDo"/>
+            <xsl:value-of disable-output-escaping="yes" select="weDo"/>
           </span>
           <span class="copy-right">
-            <strong>We don't</strong>&nbsp;
-            <xsl:value-of select="weDont"/>
+            <xsl:choose>
+              <xsl:when test="string(weDont) != ''">
+                <xsl:value-of disable-output-escaping="yes" select="weDont"/>    
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of disable-output-escaping="yes" select="weDo"/>
+              </xsl:otherwise>
+            </xsl:choose>
           </span>
         </span>
       </a>

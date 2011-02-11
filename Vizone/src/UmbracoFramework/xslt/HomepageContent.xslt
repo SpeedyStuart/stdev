@@ -57,7 +57,7 @@
         </xsl:if>
       
       <p>
-        <xsl:value-of select="homepageSummaryParagraph"/>
+        <xsl:value-of disable-output-escaping="yes" select="homepageSummaryParagraph"/>
       </p>
       <xsl:if test="string(homepageQuote) != ''">
         <p class="hpquote">

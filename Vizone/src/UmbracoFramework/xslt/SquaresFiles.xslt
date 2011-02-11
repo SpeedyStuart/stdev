@@ -43,15 +43,14 @@
           </div>
         </xsl:if>
       </xsl:if>
-
-      <xsl:apply-templates select="$currentPage/downloadFile" />
+      <ul class="block squaresWrapper">
+        <xsl:attribute name="id"><xsl:value-of select="$currentPage/faceUp"/></xsl:attribute>
+        <xsl:apply-templates select="$currentPage/downloadFile" />
+      </ul>
     </div>
   </xsl:template>
 
   <xsl:template match="downloadFile">
-
-    <ul class="block squaresWrapper">
-      <xsl:attribute name="id"><xsl:value-of select="$currentPage/faceUp"/></xsl:attribute>
       <li class="copy">
         <a>
           <xsl:attribute name="href"><xsl:call-template name="get-file-link"><xsl:with-param name="mediaId"><xsl:value-of select="file"/></xsl:with-param></xsl:call-template></xsl:attribute>
@@ -64,7 +63,6 @@
       <li class="copy"></li>
     </xsl:if>
 
-    </ul>
   </xsl:template>
 
   <xsl:template name="get-file-link">

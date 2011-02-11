@@ -33,19 +33,90 @@
       <p>
         <xsl:value-of disable-output-escaping="yes" select="panelContent"/>
       </p>
-      <xsl:if test="string(caseStudy1Content) != ''">
-        <a href="#" class="thickbox">
-          <xsl:attribute name="href">
-            /popup.aspx?csId=<xsl:value-of select="@id"/>&amp;cs=1&amp;keepThis=true&amp;TB_iframe=true&amp;height=510&amp;width=750
-          </xsl:attribute>
+      <xsl:choose>
+        <xsl:when test="string(caseStudy1Content) != '' and string(caseStudy1Logo) != ''">
+          <a href="#" class="thickbox">
+            <xsl:attribute name="href">/popup.aspx?csId=<xsl:value-of select="@id"/>&amp;cs=1&amp;keepThis=true&amp;TB_iframe=true&amp;height=510&amp;width=750</xsl:attribute>
+            <xsl:call-template name="render-image">
+              <xsl:with-param name="imageId">
+                <xsl:value-of select="string(caseStudy1Logo)"/>
+              </xsl:with-param>
+              <xsl:with-param name="alt">Case study 1</xsl:with-param>
+            </xsl:call-template>
+          </a>  
+        </xsl:when>
+        <xsl:when test="string(caseStudy1Logo) != ''">
           <xsl:call-template name="render-image">
             <xsl:with-param name="imageId">
               <xsl:value-of select="string(caseStudy1Logo)"/>
             </xsl:with-param>
             <xsl:with-param name="alt">Case study 1</xsl:with-param>
           </xsl:call-template>
-        </a>
-      </xsl:if>
+        </xsl:when>
+      </xsl:choose>
+      <xsl:choose>
+        <xsl:when test="string(caseStudy2Content) != '' and string(caseStudy2Logo) != ''">
+          <a href="#" class="thickbox">
+            <xsl:attribute name="href">/popup.aspx?csId=<xsl:value-of select="@id"/>&amp;cs=2&amp;keepThis=true&amp;TB_iframe=true&amp;height=510&amp;width=750</xsl:attribute>
+            <xsl:call-template name="render-image">
+              <xsl:with-param name="imageId">
+                <xsl:value-of select="string(caseStudy2Logo)"/>
+              </xsl:with-param>
+              <xsl:with-param name="alt">Case study 2</xsl:with-param>
+            </xsl:call-template>
+          </a>
+        </xsl:when>
+        <xsl:when test="string(caseStudy2Logo) != ''">
+          <xsl:call-template name="render-image">
+            <xsl:with-param name="imageId">
+              <xsl:value-of select="string(caseStudy2Logo)"/>
+            </xsl:with-param>
+            <xsl:with-param name="alt">Case study 2</xsl:with-param>
+          </xsl:call-template>
+        </xsl:when>
+      </xsl:choose>
+      <xsl:choose>
+        <xsl:when test="string(caseStudy3Content) != '' and string(caseStudy3Logo) != ''">
+          <a href="#" class="thickbox">
+            <xsl:attribute name="href">/popup.aspx?csId=<xsl:value-of select="@id"/>&amp;cs=3&amp;keepThis=true&amp;TB_iframe=true&amp;height=510&amp;width=750</xsl:attribute>
+            <xsl:call-template name="render-image">
+              <xsl:with-param name="imageId">
+                <xsl:value-of select="string(caseStudy3Logo)"/>
+              </xsl:with-param>
+              <xsl:with-param name="alt">Case study 3</xsl:with-param>
+            </xsl:call-template>
+          </a>
+        </xsl:when>
+        <xsl:when test="string(caseStudy3Logo) != ''">
+          <xsl:call-template name="render-image">
+            <xsl:with-param name="imageId">
+              <xsl:value-of select="string(caseStudy3Logo)"/>
+            </xsl:with-param>
+            <xsl:with-param name="alt">Case study 3</xsl:with-param>
+          </xsl:call-template>
+        </xsl:when>
+      </xsl:choose>
+      <xsl:choose>
+        <xsl:when test="string(caseStudy4Content) != '' and string(caseStudy4Logo) != ''">
+          <a href="#" class="thickbox">
+            <xsl:attribute name="href">/popup.aspx?csId=<xsl:value-of select="@id"/>&amp;cs=4&amp;keepThis=true&amp;TB_iframe=true&amp;height=510&amp;width=750</xsl:attribute>
+            <xsl:call-template name="render-image">
+              <xsl:with-param name="imageId">
+                <xsl:value-of select="string(caseStudy4Logo)"/>
+              </xsl:with-param>
+              <xsl:with-param name="alt">Case study 4</xsl:with-param>
+            </xsl:call-template>
+          </a>
+        </xsl:when>
+        <xsl:when test="string(caseStudy4Logo) != ''">
+          <xsl:call-template name="render-image">
+            <xsl:with-param name="imageId">
+              <xsl:value-of select="string(caseStudy4Logo)"/>
+            </xsl:with-param>
+            <xsl:with-param name="alt">Case study 4</xsl:with-param>
+          </xsl:call-template>
+        </xsl:when>
+      </xsl:choose>
     </div>
   </xsl:template>
 

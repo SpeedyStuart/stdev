@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]> 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title><asp:placeholder runat="server"><umbraco:Item ID="Item1" runat="server" field="pageName" /> - <umbraco:Item ID="Item2" runat="server" field="siteName" recursive="true" /></asp:placeholder></title>
+    <title><asp:placeholder runat="server"><umbraco:Item ID="Item1" runat="server" field="pageName" /> - Vizone International</asp:placeholder></title>
     <meta name="title" content="" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
