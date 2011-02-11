@@ -9,11 +9,13 @@ $(function () {
     $('.navLink').mouseout(function () { navHelper.navOut(this); });
     $('#menu').mouseover(function () { change1('pic1', 'image2'); });
     $('#menu').mouseout(function () { change1('pic1', 'image_off'); });
+    $('.squaresWrapper').mouseover(function () { imageHelper.moveFace(this, 1); });
+    $('.squaresWrapper').mouseout(function () { imageHelper.moveFace(this, 0); });
 });
 
 imageHelper = {
     moveFace: function (anchor, inorout) {
-        var imageId = $(anchor).attr('rel');
+        var imageId = $(anchor).attr('id');
         if (inorout === 1) {
             $('#' + imageId + '_up').hide();
             $('#' + imageId + '_down').show();

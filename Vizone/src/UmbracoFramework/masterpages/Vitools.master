@@ -38,6 +38,8 @@
             <p>Throughout the life cycle of a project, we are ever-watchful of dangers that threaten the pace and effectiveness of change.</p>
         </div>
 
+        <umbraco:Macro Alias="SquaresFiles" runat="server" />
+        <!--
         <div id="vitools-sub-container">
 
         <div id="vitools-image">
@@ -62,7 +64,7 @@
         <li class="copy"></li>
         <li class="copy"></li>
         </ul>
-    </div><!--block-container-->
+    </div>-->
 
     <%} %>
 </asp:Content>

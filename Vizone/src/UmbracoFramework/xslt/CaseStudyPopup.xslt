@@ -31,6 +31,9 @@
       <xsl:when test="$caseStudyType='-1'">
         <xsl:apply-templates select="$currentPage/../Home/Customers/Customer[@id=$caseStudyId]/caseStudyContent"/>
       </xsl:when>
+      <xsl:when test="$caseStudyType='-2'">
+        <xsl:apply-templates select="$currentPage/../Privacy[@id=$caseStudyId]/privacyContent"/>
+      </xsl:when>
     </xsl:choose>
 
   </xsl:template>
@@ -48,6 +51,9 @@
     <xsl:value-of disable-output-escaping="yes" select="."/>
   </xsl:template>
   <xsl:template match="caseStudyContent">
+    <xsl:value-of disable-output-escaping="yes" select="."/>
+  </xsl:template>
+  <xsl:template match="privacyContent">
     <xsl:value-of disable-output-escaping="yes" select="."/>
   </xsl:template>
   

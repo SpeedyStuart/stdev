@@ -1,4 +1,4 @@
-<%@ Master Language="C#" MasterPageFile="~/umbraco/masterpages/default.master" AutoEventWireup="true" %>
+﻿<%@ Master Language="C#" MasterPageFile="~/umbraco/masterpages/default.master" AutoEventWireup="true" %>
 <asp:Content ContentPlaceHolderID="ContentPlaceHolderDefault" runat="server">
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]> 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -46,7 +46,7 @@
             <umbraco:Macro Alias="TopNavigation" runat="server" />
         </div><!--header-->
 
-        <umbraco:Macro Alias="Navigation" runat="server"></umbraco:Macro>
+        <umbraco:Macro Alias="Navigation" runat="server"/>
         <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server"></asp:ContentPlaceHolder>
   </body>
 </html>  

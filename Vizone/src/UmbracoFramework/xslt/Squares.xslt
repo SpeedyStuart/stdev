@@ -50,7 +50,7 @@
 
     <div class="block">
       <a href="#" class="squareBlock">
-        <xsl:attribute name="rel"><xsl:value-of select="$currentPage/faceUp"/></xsl:attribute>
+        <xsl:attribute name="id"><xsl:value-of select="$currentPage/faceUp"/></xsl:attribute>
         <span class="copy">
           <span class="copy-left">
             <strong>We</strong>&nbsp;
