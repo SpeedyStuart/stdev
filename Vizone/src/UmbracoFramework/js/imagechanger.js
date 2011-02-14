@@ -2,6 +2,9 @@ $(function () {
     $('.squareBlock').click(function (event) { event.preventDefault(); });
     $('.squareBlock').mouseover(function () { imageHelper.moveFace(this, 1); });
     $('.squareBlock').mouseout(function () { imageHelper.moveFace(this, 0); });
+    $('.teamblock').click(function (event) { event.preventDefault(); });
+    $('.teamblock').mouseover(function () { imageHelper.moveFace(this, 1); });
+    $('.teamblock').mouseout(function () { imageHelper.moveFace(this, 0); });
     $('.personImage').click(function (event) { event.preventDefault(); });
     $('.personImage').mouseover(function () { textHelper.showText(this); });
     $('.personImage').mouseout(function () { textHelper.hideText(this); });
@@ -11,9 +14,12 @@ $(function () {
     $('#menu').mouseout(function () { change1('pic1', 'image_off'); });
     $('.squaresWrapper').mouseover(function () { imageHelper.moveFace(this, 1); });
     $('.squaresWrapper').mouseout(function () { imageHelper.moveFace(this, 0); });
+
+    timer = setTimeout('navHelper.pointLeft()', 5000);
 });
 
-imageHelper = {
+var timer;
+imageHelper = {    
     moveFace: function (anchor, inorout) {
         var imageId = $(anchor).attr('id');
         if (inorout === 1) {
@@ -43,11 +49,16 @@ navHelper = {
         var id = $(anchor).attr('rel');
         hidetext('hptext1');
         displaytext('hptext' + id);
+        clearTimeout(timer);
     },
     navOut: function (anchor) {
         var id = $(anchor).attr('rel');
         hidetext('hptext' + id);
         displaytext('hptext1');
+        timer = setTimeout('navHelper.pointLeft()', 5000);
+    },
+    pointLeft: function () {
+        change1('pic1', 'image3');
     }
 }
 

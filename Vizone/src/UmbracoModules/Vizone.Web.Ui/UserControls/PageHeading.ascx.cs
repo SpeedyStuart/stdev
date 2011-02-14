@@ -30,7 +30,18 @@ namespace Vizone.Web.Ui.UserControls
                     return string.Format("{0}<span class=\"h1lime\">{1}</span>{2}",
                         HeadingText.Substring(0, s),
                         HeadingText.Substring(s, l),
-                        HeadingText.Substring(s+l));
+                        HeadingText.Substring(s + l));
+                }
+                else
+                {
+                    // Just format the first word
+                    int s = 0;
+                    int l = HeadingText.ToLower().IndexOf(" ");
+
+                    return string.Format("{0}<span class=\"h1lime\">{1}</span>{2}",
+                        HeadingText.Substring(0, s),
+                        HeadingText.Substring(s, l),
+                        HeadingText.Substring(s + l));
                 }
             }
 

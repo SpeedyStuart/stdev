@@ -54,7 +54,7 @@
     <li>
       <a>
         <xsl:attribute name="href">#page<xsl:value-of select="@id"/></xsl:attribute>
-        Page <xsl:value-of select="$position"/>
+        People <xsl:value-of select="$position"/>
       </a>
     </li>
   </xsl:template>

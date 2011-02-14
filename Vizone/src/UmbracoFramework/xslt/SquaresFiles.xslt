@@ -43,24 +43,30 @@
           </div>
         </xsl:if>
       </xsl:if>
-      <ul class="block squaresWrapper">
+      <div class="teamblock">
         <xsl:attribute name="id"><xsl:value-of select="$currentPage/faceUp"/></xsl:attribute>
         <xsl:apply-templates select="$currentPage/downloadFile" />
-      </ul>
+      </div>
     </div>
   </xsl:template>
 
   <xsl:template match="downloadFile">
-      <li class="copy">
+      <span class="teamcopy">
         <a>
           <xsl:attribute name="href"><xsl:call-template name="get-file-link"><xsl:with-param name="mediaId"><xsl:value-of select="file"/></xsl:with-param></xsl:call-template></xsl:attribute>
           <xsl:value-of select="title"/><span class="arrow"> >></span>
         </a>
-      </li>
-      
+      </span>
+      <br class="hdn"/>
     <xsl:if test="position() = 3 or position() = 6 or position() = 9">
-      <li class="copy"></li>
-      <li class="copy"></li>
+      <span class="teamcopy">
+        <span class="blank">&nbsp;</span>
+      </span>
+      <br class="hdn" />
+      <span class="teamcopy">
+        <span class="blank">&nbsp;</span>
+      </span>
+      <br class="hdn" />
     </xsl:if>
 
   </xsl:template>

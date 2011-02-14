@@ -53,15 +53,6 @@ h3 {font-size:13px;}
          VIGOROUS
 ************************************************/
 
-#block-container {position:relative; float:left; width:675px; height:406px; padding: 0;}
-.block {float:left; overflow:hidden; display:block; width:134px; height:134px; border-right:1px solid #fff; border-bottom: 1px solid #fff; background: #f5f5f6; padding:0; margin:0;}
-.block a {display:block;width:268px; height:134px; padding:0; margin:0; text-decoration:none;}
-.block a:hover {margin-left: -134px;}
-.copy {display:block; width:268px; height:134px; padding:0; margin:0;}
-.copy-left {float:left; display:block; width:114px; height:114px; background: #f5f5f6; padding:10px; margin:0; color: #999;}
-.copy-right {float:left; display:block; width:114px; height:114px; background: #b4d513; padding:10px; margin:0; color:#fff;}
-.copy-left strong, .copy-right strong {color:#036;}
-
  #vigorous-slider{float:left;width: 736px;min-height: 425px;margin: 0 0;position: relative;background: url(images/vigorous/vigorous-bg.png) no-repeat;}   
 .vigorous-img img {float:right; position: absolute; top:0px; left:469px; z-index: 20;}
 .slider-container {position:relative; float:left; width:736px; min-height: 464px; background: url(images/vigorous/vigorous-bg.png) 0 0 no-repeat;}
@@ -72,14 +63,23 @@ h3 {font-size:13px;}
          VIRTUOUS
 ************************************************/
 
-#virtuous-image {float:left; position:absolute; top:35px; left: 425px;}
+#block-container {position:relative; float:left; width:675px; height:406px; padding: 0;}
+.block {float:left; overflow:hidden; display:block; width:135px; height:135px; background: #f5f5f6; padding:0; margin:0;}
+.block a {display:block;width:270px; height:135px; padding:0; margin:0; text-decoration:none;}
+.block a:hover {margin-left: -135px;}
+.copy {display:block; width:270px; height:135px; padding:0; margin:0;}
+.copy-left {float:left; display:block; width:114px; height:114px; background: #f5f5f6; padding:10px; margin:0; color: #999; border-right:1px solid #fff; border-bottom: 1px solid #fff;}
+.copy-right {float:left; display:block; width:114px; height:114px; background: #b4d513; padding:10px; margin:0; color:#fff; border-right:1px solid #fff; border-bottom: 1px solid #fff;}
+.copy-left strong, .copy-right strong {color:#036;}
+
+#virtuous-image {float:left; position:absolute; top:55px; left: 425px;}
   
   
 /************************************************
          VIntage
 ************************************************/  
   
-#vintage-image {float:left; position:absolute; top:55px; left: 419px;}
+#vintage-image {float:left; position:absolute; top:69px; left: 405px;}
   
   
 /************************************************
@@ -150,12 +150,12 @@ input[type="submit"] {float:right; margin: 10px 10px 0 0;}
 
 
 #vitools-sub-container {position:relative; float:left; width:675px; height:406px; padding: 0;}
-ul.block {float:left; display:block; width:675px; height:405px; border-right:1px solid #fff; border-bottom: 1px solid #fff; background: #f5f5f6; padding:0; margin:0;}
-li.copy {float:left;display:block; width:134px; height:134px; padding:0; margin:0;border-right: 1px solid #fff; border-bottom: 1px solid #fff;}
-li.copy a {display:block; text-decoration:none; width:114px; height:114px; background: #f5f5f6; padding:10px; margin:0; color:#fff; font-size: 17px; font-weight:normal; color:#999;}
-li.copy a:hover {display:block; text-decoration:none; width:114px; height:114px; background: #464646; padding:10px; margin:0; color:#fff;}
-li.copy a span.arrow {color:#f5f5f6;}
-li.copy a:hover span.arrow {color:#b0d409;}
+.teamblock {float:left; display:block; width:675px; height:405px; border-right:1px solid #fff; border-bottom: 1px solid #fff; background: #f5f5f6; padding:0; margin:0;}
+.teamcopy {float:left;display:block; width:135px; height:135px; padding:0; margin:0;}
+.teamcopy a, .teamcopy span.blank {display:block; text-decoration:none; width:114px; height:114px; background: #f5f5f6; padding:10px; margin:0; color:#fff; font-size: 17px; font-weight:normal; color:#999;border-right: 1px solid #fff; border-bottom: 1px solid #fff;}
+.teamcopy a:hover {display:block; text-decoration:none; width:114px; height:114px; background: #464646; padding:10px; margin:0; color:#fff;border-right: 1px solid #fff; border-bottom: 1px solid #fff;}
+.teamcopy a span.arrow {color:#f5f5f6;}
+.teamcopy a:hover span.arrow {color:#b0d409;}
 
 #vitools-image {float:left; position:absolute; top:46px; left: 405px;}
   
@@ -164,10 +164,12 @@ li.copy a:hover span.arrow {color:#b0d409;}
          VIRTUAL
 ************************************************/  
   
-.maptext {float:left; position:absolute; top:270px; left:0px; z-index:40;}
+.maptext {float:left; position:absolute; top:135px; left:0px; z-index:40;}
 .maptext p {float:left; width:115px; padding: 0px; font-size: 12px; line-height:18px; color:#fff;}
 .maptext ul {float:left; width:115px; padding: 0 10px; margin:0; font-size: 12px; line-height:18px; color:#fff;}
 .maptext h2 {font-size: 12px; line-height:18px; margin:0; padding:10px 10px 0 10px; color:#555;}
+
+.mapimage {float:left; position:absolute; top:270px; left:0px; z-index:40;}
 
   /************************************************
          Lightbox Content Formatting

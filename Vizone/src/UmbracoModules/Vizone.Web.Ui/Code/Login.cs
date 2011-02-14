@@ -10,6 +10,8 @@ namespace Vizone.Web.Ui.Code
     public class Login : System.Web.UI.MasterPage
     {
         string passphrase = "Hammer time";
+        string username = "Welcome";
+        string password = "Vital";
 
         public string EmailError = string.Empty;
         public string PasswordError = string.Empty;
@@ -45,15 +47,17 @@ namespace Vizone.Web.Ui.Code
                 if (EmailError == string.Empty && PasswordError == string.Empty)
                 {
                     // Attempt Login
-                    if (Request["username"] == "s" && Request["password"] == "p")
+                    if (Request["username"] == username && Request["password"] == password)
                     {
                         // Logged in - create cookie
                         string hash = getMd5Hash(passphrase + Request.UserHostAddress);
                         WriteCookie(hash);
-                        
+
                         Response.Redirect(Request.Url.AbsolutePath, true);
                         return;
                     }
+                    else
+                        EmailError = BuildError("Login failed");
                 }
             }
         }

@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+﻿        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
@@ -44,16 +44,16 @@
 <div id="container">
 
 <div id="header">
-<a href="index.html"><img src="assets/images/common/vizone-logo.png" alt="" /></a><p class="header-links"><a href="virtual.html" onmouseover="hidetext('hptext1');displaytext('hptext8');change1('pic1','image2');" onmouseout="hidetext('hptext8');displaytext('hptext1');change1('pic1','image_off');">Virtual</a><br class="hdn" /><a href="vitools.html" >Vitools</a><br class="hdn" /><a href="visit.html" >Visit</a></p>
+<a href="index.html"><img src="assets/images/common/vizone-logo.png" alt="" /></a><p class="header-links"><a href="virtual.html" onmouseover="hidetext('hptext1');displaytext('hptext8');change1('pic1','image2');clearTimeout(hptimer)" onmouseout="hidetext('hptext8');displaytext('hptext1');change1('pic1','image_off');hptimer=setTimeout('runImage()', 5000)">Virtual</a><br class="hdn" /><a href="vitools.html" >Vitools</a><br class="hdn" /><a href="visit.html" >Visit</a></p>
 </div><!--header-->
 
 <ul id="menu">
-<li><a href="vintage.html" onmouseover="hidetext('hptext1');displaytext('hptext2');change1('pic1','image2');" onmouseout="hidetext('hptext2');displaytext('hptext1');change1('pic1','image_off');setTimeout('runImage()', 5000);">Vintage</a></li>
-<li><a href="vigorous.html" onmouseover="hidetext('hptext1');displaytext('hptext3');change1('pic1','image2')" onmouseout="hidetext('hptext3');displaytext('hptext1');change1('pic1','image_off');setTimeout('runImage()', 5000);">Vigorous</a></li>
-<li><a href="vital.html" onmouseover="hidetext('hptext1');displaytext('hptext4');change1('pic1','image2')" onmouseout="hidetext('hptext4');displaytext('hptext1');change1('pic1','image_off');setTimeout('runImage()', 5000);">Vital</a></li>
-<li><a href="virtuous.html" onmouseover="hidetext('hptext1');displaytext('hptext5');change1('pic1','image2')" onmouseout="hidetext('hptext5');displaytext('hptext1');change1('pic1','image_off');setTimeout('runImage()', 5000);">Virtuous</a></li>
-<li><a href="vigilant.html" onmouseover="hidetext('hptext1');displaytext('hptext6');change1('pic1','image2')" onmouseout="hidetext('hptext6');displaytext('hptext1');change1('pic1','image_off');setTimeout('runImage()', 5000);">Vigilant</a></li>
-<li><a href="victorious.html" onmouseover="hidetext('hptext1');displaytext('hptext7');change1('pic1','image2')" onmouseout="hidetext('hptext7');displaytext('hptext1');change1('pic1','image_off');setTimeout('runImage()', 5000);">Victorious</a></li>
+<li><a href="vital.html" onmouseover="hidetext('hptext1');displaytext('hptext4');change1('pic1','image2');clearTimeout(hptimer)" onmouseout="hidetext('hptext4');displaytext('hptext1');change1('pic1','image_off');hptimer=setTimeout('runImage()', 5000)">Vital</a></li>
+<li><a href="vintage.html" onmouseover="hidetext('hptext1');displaytext('hptext2');change1('pic1','image2');clearTimeout(hptimer)" onmouseout="hidetext('hptext2');displaytext('hptext1');change1('pic1','image_off');hptimer=setTimeout('runImage()', 5000)">Vintage</a></li>
+<li><a href="vigorous.html" onmouseover="hidetext('hptext1');displaytext('hptext3');change1('pic1','image2');clearTimeout(hptimer)" onmouseout="hidetext('hptext3');displaytext('hptext1');change1('pic1','image_off');hptimer=setTimeout('runImage()', 5000)">Vigorous</a></li>
+<li><a href="vigilant.html" onmouseover="hidetext('hptext1');displaytext('hptext6');change1('pic1','image2');clearTimeout(hptimer)" onmouseout="hidetext('hptext6');displaytext('hptext1');change1('pic1','image_off');hptimer=setTimeout('runImage()', 5000)">Vigilant</a></li>
+<li><a href="virtuous.html" onmouseover="hidetext('hptext1');displaytext('hptext5');change1('pic1','image2');clearTimeout(hptimer)" onmouseout="hidetext('hptext5');displaytext('hptext1');change1('pic1','image_off');hptimer=setTimeout('runImage()', 5000)">Virtuous</a></li>
+<li><a href="victorious.html" onmouseover="hidetext('hptext1');displaytext('hptext7');change1('pic1','image2');clearTimeout(hptimer)" onmouseout="hidetext('hptext7');displaytext('hptext1');change1('pic1','image_off');hptimer=setTimeout('runImage()', 5000)">Victorious</a></li>
 <li class="smallmenu">&copy; Copyright Vizone International 2011</li>
 <li class="smallmenu1"><a href="privacy.html?keepThis=true&amp;TB_iframe=true&amp;height=510&amp;width=750" title="" class="thickbox">privacy</a></li>
 </ul>
@@ -76,50 +76,36 @@
 <div id="hptext2" class="hptext" style="display:none;">
 <img src="assets/images/homepage/heading2.png" alt="" />
 <p>Vizone&rsquo;s reputation is founded on the experience of our people and the results we achieve together for our customers.</p>
-<p class="hpquote"><em>&ldquo;Vizone came in and gave us the confidence to do it ourselves...&rdquo;</em>   >></p>
-<p class="hpquote1">CTO Vodafone UK</p>
 </div>
 
 <div id="hptext3" class="hptext" style="display:none;">
 <img src="assets/images/homepage/heading3.png" alt="" />
 <p>The Vizone Way is all about combining the best teams and tools so that we can deliver answers that work in the real world.</p>
-<p class="hpquote"><em>&ldquo;Vizone came in and gave us the confidence to do it ourselves...&rdquo;</em>   >></p>
-<p class="hpquote1">CTO Vodafone UK</p>
 </div>
 
 <div id="hptext4" class="hptext" style="display:none;">
 <img src="assets/images/homepage/heading4.png" alt="" />
 <p>By bringing talented individuals and motivated customers together, we are able to deliver tangible results and transform businesses.</p>
-<p class="hpquote"><em>&ldquo;Vizone came in and gave us the confidence to do it ourselves...&rdquo;</em>   >></p>
-<p class="hpquote1">CTO Vodafone UK</p>
 </div>
 
 <div id="hptext5" class="hptext" style="display:none;">
 <img src="assets/images/homepage/heading5.png" alt="" />
 <p>We work side by side with our customers, telling it like it is and making sure you have the advice you need to excel.</p>
-<p class="hpquote"><em>&ldquo;Vizone came in and gave us the confidence to do it ourselves...&rdquo;</em>   >></p>
-<p class="hpquote1">CTO Vodafone UK</p>
 </div>
 
 <div id="hptext6" class="hptext" style="display:none;">
 <img src="assets/images/homepage/heading6.png" alt="" />
 <p>Throughout the life cycle of a project, we are ever-watchful of dangers that threaten the pace and effectiveness of change.</p>
-<p class="hpquote"><em>&ldquo;Vizone came in and gave us the confidence to do it ourselves...&rdquo;</em>   >></p>
-<p class="hpquote1">CTO Vodafone UK</p>
 </div>
 
 <div id="hptext7" class="hptext" style="display:none;">
 <img src="assets/images/homepage/heading7.png" alt="" />
 <p>We know that by creating success for our customers, our own is assured - our case studies give you a flavour of the results we could achieve for your organisation.</p>
-<p class="hpquote"><em>&ldquo;Vizone came in and gave us the confidence to do it ourselves...&rdquo;</em>   >></p>
-<p class="hpquote1">CTO Vodafone UK</p>
 </div>
 
 <div id="hptext8" class="hptext" style="display:none;">
 <img src="assets/images/homepage/heading8.png" alt="" />
 <p>Our people and our customers can use our online portal to access information about a specific project or all things change management.</p>
-<p class="hpquote"><em>&ldquo;Vizone came in and gave us the confidence to do it ourselves...&rdquo;</em>   >></p>
-<p class="hpquote1">CTO Vodafone UK</p>
 </div>
 
 </div><!--block-container-->
@@ -128,7 +114,7 @@
 
 <script type="text/javascript" charset="utf-8">
 <!--
-window.setTimeout("runImage()", 3000);
+window.hptimer=setTimeout("runImage()", 3000);
 //-->
 </script>
 

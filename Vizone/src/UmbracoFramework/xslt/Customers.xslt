@@ -37,26 +37,23 @@
   </xsl:template>
 
   <!-- Divide list into to panels - currently 2 people per panel (Change all 2s to 10s when more data-->
-  <xsl:template match="Customer[(position()-1) mod 2 = 0]">
-    <xsl:variable name="position" select="1 +((position()-1) div 2)"/>
+  <xsl:template match="Customer[(position()-1) mod 15 = 0]">
+    <xsl:variable name="position" select="1 +((position()-1) div 15)"/>
     <div class="panel">
-      <xsl:attribute name="id">
-        page<xsl:value-of select="$position"/>
+      <xsl:attribute name="id">page<xsl:value-of select="$position"/>
       </xsl:attribute>
-      <xsl:apply-templates select="$currentPage/Customer[position() &lt;= $position*2 and position() &gt; ($position*2)-2]" mode="customer"/>
+      <xsl:apply-templates select="$currentPage/Customer[position() &lt;= $position*15 and position() &gt; ($position*15)-15]" mode="customer"/>
     </div>
   </xsl:template>
 
   <!-- Divide list into to panels - currently 2 people per panel (Change the mod 2 and div 2 to 10 when more data-->
   <!-- this oneis for the navigation but follows the exact same logic as above-->
-  <xsl:template match="Customer[(position()-1) mod 2 = 0]" mode="navigation">
-    <xsl:variable name="position" select="1 +((position()-1) div 2)"/>
+  <xsl:template match="Customer[(position()-1) mod 15 = 0]" mode="navigation">
+    <xsl:variable name="position" select="1 +((position()-1) div 15)"/>
     <li>
       <a>
-        <xsl:attribute name="href">
-          #page<xsl:value-of select="@id"/>
-        </xsl:attribute>
-        Page <xsl:value-of select="$position"/>
+        <xsl:attribute name="href">#page<xsl:value-of select="@id"/></xsl:attribute>
+        Clients <xsl:value-of select="$position"/>
       </a>
     </li>
   </xsl:template>
@@ -65,28 +62,69 @@
   <xsl:template match="Customer" mode="customer">
 
     <div class="victoryblock">
-      <a class="thickbox">
-        <xsl:attribute name="href">
-          /popup.aspx?csId=<xsl:value-of select="@id"/>&amp;cs=-1&amp;keepThis=true&amp;TB_iframe=true&amp;height=510&amp;width=750
-        </xsl:attribute>
-        <span class="victoryrollover">
-          <span class="victory-left">
-            <xsl:call-template name="render-image">
-              <xsl:with-param name="imageId" select="logo"/>
-            </xsl:call-template>
-          </span>
-          <span class="victory-right">
-            <span class="description">
-              <em>
-                &ldquo;<xsl:value-of select="customerQuote"/>&rdquo; <span class="lime">>></span>
-              </em><br /><br /><span class="lime">
-                <strong>
-                  <xsl:value-of select="quoteAttributionName"/> -</strong>
-              </span><br /><xsl:value-of select="quoteAttributionJobTitle"/>
+      <xsl:choose>
+        <xsl:when test="string(caseStudyContent) != ''">
+          <a class="thickbox">
+            <xsl:attribute name="href">/popup.aspx?csId=<xsl:value-of select="@id"/>&amp;cs=-1&amp;keepThis=true&amp;TB_iframe=true&amp;height=510&amp;width=750</xsl:attribute>
+            <span class="victoryrollover">
+              <span class="victory-left">
+                <xsl:call-template name="render-image">
+                  <xsl:with-param name="imageId" select="logo"/>
+                </xsl:call-template>
+              </span>
+              <xsl:choose>
+                <xsl:when test="string(customerQuote) !=''">
+                  <span class="victory-right">
+                    <span class="description">
+                      <em>
+                        &ldquo;<xsl:value-of select="customerQuote"/>&rdquo; <span class="lime">>></span>
+                      </em><br /><br /><span class="lime">
+                        <strong>
+                          <xsl:value-of select="quoteAttributionName"/> -</strong>
+                      </span><br /><xsl:value-of select="quoteAttributionJobTitle"/>
+                    </span>
+                  </span>
+                </xsl:when>
+                <xsl:otherwise>
+                  <span class="victory-left">
+                    <xsl:call-template name="render-image">
+                      <xsl:with-param name="imageId" select="logo"/>
+                    </xsl:call-template>
+                  </span>
+                </xsl:otherwise>
+              </xsl:choose>
             </span>
+          </a>    
+        </xsl:when>
+        <xsl:otherwise>
+          <span class="victoryrollover">
+            <span class="victory-left">
+              <xsl:call-template name="render-image">
+                <xsl:with-param name="imageId" select="logo"/>
+              </xsl:call-template>
+            </span>
+            <xsl:if test="string(customerQuote) !=''">
+              <span class="victory-right">
+                <span class="description">
+                  <em>
+                    &ldquo;<xsl:value-of select="customerQuote"/>&rdquo; <span class="lime">>></span>
+                  </em>
+                  <br />
+                  <br />
+                  <span class="lime">
+                    <strong>
+                      <xsl:value-of select="quoteAttributionName"/> -
+                    </strong>
+                  </span>
+                  <br />
+                  <xsl:value-of select="quoteAttributionJobTitle"/>
+                </span>
+              </span>
+            </xsl:if>
           </span>
-        </span>
-      </a>
+        </xsl:otherwise>
+      </xsl:choose>
+      
     </div>
   </xsl:template>
 
